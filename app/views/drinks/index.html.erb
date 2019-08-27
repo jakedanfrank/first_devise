@@ -1,0 +1,30 @@
+<style>
+ .bg{
+  background-color: black;
+  color: darkturquoise;
+  margin: 20px;
+  padding: 20px;
+}
+</style>
+<div class="bg">
+<%= button_to "LOG OUT", destroy_user_session_path, class: "ui inverted orange basic button", method: :delete %>
+<h1><i class="anchor icon"></i>Howdy <%= current_user.first_name %>!</h1>
+<h2><i class="blind icon"></i>Welcome to Drinks R Us</h2>
+<hr />
+  <%= link_to "Add Drink", new_drink_path, class: "ui inverted basic button" %>
+    <h3><i class="glass martini icon"></i> Drink List </h3>
+<ul>
+<% @drinks.each do |drink| %>
+  <li>
+    <%= drink.name %>
+  <%= link_to "View Drink", drink_path(drink.id), class: "ui inverted teal basic button" %>
+  <hr />
+  <br />
+  
+  </li>
+<% end %>
+</ul>
+</div>
+
+
+

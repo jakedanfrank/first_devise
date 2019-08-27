@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem "materialize-sass"
 gem "devise"
+gem "semantic-ui-sass"
 
 group :development, :test do
   gem "pry-rails"

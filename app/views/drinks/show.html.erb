@@ -1,0 +1,20 @@
+<style>
+ .bg{
+  background-color: black;
+  color: darkturquoise;
+  margin: 20px;
+  padding: 20px;
+}
+</style>
+<div class="bg">
+<h1><%= @drink.name%></h1>
+<p>This Drink is the BEES KNEES!</p>
+  <%= link_to "Back To Drink List", drinks_path, class: "ui inverted teal basic button" %>
+    <i class="glass martini icon"></i>
+<hr />
+  <%= link_to "Delete Drink", @drink, class: "ui inverted red basic button", method: :delete %>
+    <i class="trash alternate outline icon"></i>
+<hr />
+  <%= link_to "Edit Drink", edit_drink_path, class: "ui inverted teal basic button" %>
+    <i class="pencil alternate icon"></i>
+</div>
